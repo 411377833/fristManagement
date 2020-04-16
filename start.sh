@@ -11,6 +11,6 @@ docker rm -f fristManagement &> /dev/null
 
 #启动容器
 docker run -d --restart=on-failure:5\
-    -p 80:80 \
+    -p /management:8080 \
     -v $PWD/dist:/usr/share/nginx/html \
     --name fristManagement nginx
